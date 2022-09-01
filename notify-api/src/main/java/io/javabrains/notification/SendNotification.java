@@ -26,7 +26,7 @@ public class SendNotification {
 		Map<String, String> payload = new HashMap<>();
 
 		// Add "message" parameter to payload
-		payload.put("message", "Hello from API");
+		payload.put("message", "Hello from API. Your token is " + token);
 
 		// iOS notification fields
 		Map<String, Object> notification = new HashMap<>();

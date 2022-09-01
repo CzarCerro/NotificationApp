@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
       print('Device token: $deviceToken');
 
       // Send the token to your backend server
-      await updateToken(deviceToken,"0");
+      await updateToken(deviceToken,"false");
 
       // Update UI with token
       setState(() {
@@ -181,16 +181,17 @@ class _HomePageState extends State<HomePage> {
                   ),
                   ToggleButtons(
                     direction: Axis.horizontal,
-                    onPressed: (int index) {
-                      setState(() {
+                    onPressed: (int index) async {
+                      setState(()  {
                         // The button that is tapped is set to true, and the others to false.
                         for (int i = 0; i < _loopingNotification.length; i++) {
                           _loopingNotification[i] = i == index;
                         }
-                        Pushy.toggleFCM(_loopingNotification[0]);
+
+
                       });
-
-
+                      Pushy.toggleFCM(_loopingNotification[0]);
+                      await updateToken(_deviceToken,_loopingNotification[0].toString());
 
                     },
                     borderRadius: const BorderRadius.all(Radius.circular(8)),
