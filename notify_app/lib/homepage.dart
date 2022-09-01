@@ -28,6 +28,8 @@ void backgroundNotificationListener(Map<String, dynamic> data) {
 }
 
 class _HomePageState extends State<HomePage> {
+  String _deviceToken = 'Loading...';
+
   @override
   void initState() {
     super.initState();
@@ -54,7 +56,10 @@ class _HomePageState extends State<HomePage> {
       // Send the token to your backend server
       // ...
 
-
+      // Update UI with token
+      setState(() {
+        _deviceToken = deviceToken;
+      });
     } on PlatformException catch (error) {
       // Print to console/logcat
       print('Error: ${error.message}');
@@ -72,12 +77,22 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(top: 100.0),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.all(10),
+              child: Text(_deviceToken,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.grey[700])),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 50),
               child: Container(
                 height: 50,
                 width: 250,
@@ -86,10 +101,27 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(20)),
                 child: TextButton(
                   onPressed: () async {
-
                   },
                   child: const Text(
                     'Logout',
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 50),
+              child: Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(20)),
+                child: TextButton(
+                  onPressed: () async {
+                  },
+                  child: const Text(
+                    'test API',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
                 ),
