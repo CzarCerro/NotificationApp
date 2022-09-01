@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:notify_app/src/http/sendNotification.dart';
 import 'package:pushy_flutter/pushy_flutter.dart';
 
 class HomePage extends StatefulWidget {
@@ -120,6 +121,7 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(20)),
                 child: TextButton(
                   onPressed: () async {
+                    await sendNotification();
                   },
                   child: const Text(
                     'test API',
