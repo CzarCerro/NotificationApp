@@ -34,7 +34,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    pushyInitialization();
   }
 
   Future<void> pushyInitialization() async {
@@ -47,6 +46,8 @@ class _HomePageState extends State<HomePage> {
 
     // Set custom notification icon (Android)
     Pushy.setNotificationIcon('ic_notify');
+
+    Pushy.toggleNotifications(true);
 
     try {
       // Register the device for push notifications
@@ -94,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.grey[700])),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding: const EdgeInsets.only(top: 20),
               child: Container(
                 height: 50,
                 width: 250,
@@ -102,7 +103,28 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.deepPurple,
                     borderRadius: BorderRadius.circular(20)),
                 child: TextButton(
-                  onPressed: () async {
+                  onPressed: ()  {
+                    pushyInitialization();
+                  },
+                  child: const Text(
+                    'init',
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(20)),
+                child: TextButton(
+                  onPressed: () {
+                    Pushy.toggleNotifications(false);
+                    Navigator.pop(context);
                   },
                   child: const Text(
                     'Logout',
@@ -112,7 +134,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding: const EdgeInsets.only(top: 20),
               child: Container(
                 height: 50,
                 width: 250,
