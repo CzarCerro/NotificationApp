@@ -14,7 +14,7 @@ void backgroundNotificationListener(Map<String, dynamic> data) {
   print('Received notification: $data');
 
   // Notification title
-  String notificationTitle = 'MyApp';
+  String notificationTitle = 'NotifyApp';
 
   // Attempt to extract the "message" property from the payload: {"message":"Hello World!"}
   String notificationText = data['message'] ?? 'Hello World!';
@@ -41,7 +41,8 @@ class _HomePageState extends State<HomePage> {
     Pushy.listen();
 
     // // Enable FCM Fallback Delivery
-    // Pushy.toggleFCM(true);
+    // Enable FCM fallback delivery
+    Pushy.toggleFCM(true);
 
     // Set custom notification icon (Android)
     Pushy.setNotificationIcon('ic_notify');

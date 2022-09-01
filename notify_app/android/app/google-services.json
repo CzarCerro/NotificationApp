@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "85733449155",
+    "project_id": "notify-app-40faf",
+    "storage_bucket": "notify-app-40faf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85733449155:android:6f9197b0f5089af8a63176",
+        "android_client_info": {
+          "package_name": "com.lionsbot.testing.notify_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85733449155-4lgnco9d2mvbpo7pffcjmsebup3l0dl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKV47bxykf5BkpKcwj7aM9zaGkF6Ez-i4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85733449155-4lgnco9d2mvbpo7pffcjmsebup3l0dl8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -32,7 +32,7 @@ public class NotificationService {
 		notification.put("badge", 1);
 		notification.put("sound", "ping.aiff");
 		notification.put("title", "Test Notification");
-		notification.put("body", "Hello World \u270c");
+		notification.put("body", "Hello from API \u270c");
 
 		// Prepare the push request
 		PushyAPI.PushyPushRequest push = new PushyAPI.PushyPushRequest(payload, to, notification);
