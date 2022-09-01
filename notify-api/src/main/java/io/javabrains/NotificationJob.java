@@ -2,8 +2,6 @@ package io.javabrains;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
-
 import io.javabrains.notification.SendNotification;
 
 
@@ -17,7 +15,7 @@ public class NotificationJob implements CommandLineRunner {
     		Thread.sleep(5000);
     		
     		System.out.println("Sending notification\n");
-    		SendNotification.sendNotification();
+    		//SendNotification.sendNotification();
     	}        
     }
     

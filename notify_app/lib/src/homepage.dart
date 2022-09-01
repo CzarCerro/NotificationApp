@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:notify_app/src/http/sendNotification.dart';
+import 'package:notify_app/src/http/updateToken.dart';
 import 'package:pushy_flutter/pushy_flutter.dart';
 
 const List<Widget> toggleSwitch = <Widget>[Text('On'), Text('Off')];
@@ -63,7 +64,7 @@ class _HomePageState extends State<HomePage> {
       print('Device token: $deviceToken');
 
       // Send the token to your backend server
-      // ...
+      await updateToken(deviceToken,"0");
 
       // Update UI with token
       setState(() {
@@ -236,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(20)),
                 child: TextButton(
                   onPressed: () async {
-                    await sendNotification();
+                    await updateToken(_deviceToken,"0");
                   },
                   child: const Text(
                     'test API',
