@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Thu Sep 01 19:06:08 SGT 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0182-f8ba-cf3a-000002336380 
-on database directory memory:C:\Users\Abram\Work\IWSP\LionsBot\Tasks\NotificationApp\notify-api\7c37e026-8b1f-44dd-88e1-aa49cb93eae4 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739 
+Thu Sep 01 20:43:41 SGT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0182-f914-1e89-0000023a7800 
+on database directory memory:C:\Users\Abram\Work\IWSP\LionsBot\Tasks\NotificationApp\notify-api\684087d0-effe-40a2-90ae-5b0b0e0d0ba4 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739 
 Loaded from file:/C:/Users/Abram/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Eclipse Adoptium
 java.runtime.version=17.0.4+8

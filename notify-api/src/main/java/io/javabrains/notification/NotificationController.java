@@ -26,10 +26,10 @@ public class NotificationController {
 		 return message;
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, value = "/notify")
-	public int sendNotification() {
+	@RequestMapping(method = RequestMethod.POST, value = "/notify/{token}")
+	public int sendNotification(@PathVariable String token) {
 		int status = 0;
-		status = notificationService.sendNotification();
+		status = notificationService.sendNotification(token);
 		
 		return status;
 	}

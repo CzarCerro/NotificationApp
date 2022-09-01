@@ -11,13 +11,13 @@ import io.javabrains.PushyAPI;
 
 @Component
 public class SendNotification {
-	public static int sendNotification() {
+	public static int sendNotification(String token) {
 		// Prepare list of target device tokens
 		List<String> deviceTokens = new ArrayList<>();
 		int status = 0;
 
 		// Add your device tokens here
-	    deviceTokens.add("3c80d9d89b761c1f9f4f72");
+	    deviceTokens.add(token);
 	    
 		// Convert to String[] array
 		String[] to = deviceTokens.toArray(new String[deviceTokens.size()]);

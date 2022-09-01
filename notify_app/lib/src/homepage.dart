@@ -189,6 +189,9 @@ class _HomePageState extends State<HomePage> {
                         }
                         Pushy.toggleFCM(_loopingNotification[0]);
                       });
+
+
+
                     },
                     borderRadius: const BorderRadius.all(Radius.circular(8)),
                     selectedBorderColor: Colors.red[700],
@@ -237,10 +240,10 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(20)),
                 child: TextButton(
                   onPressed: () async {
-                    await updateToken(_deviceToken,"0");
+                    await sendNotification(_deviceToken);
                   },
                   child: const Text(
-                    'test API',
+                    'Test Notification',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
                 ),

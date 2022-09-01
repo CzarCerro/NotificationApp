@@ -4,8 +4,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class NotificationService {
-	public static int sendNotification() {
-		return SendNotification.sendNotification();
+	public static int sendNotification(String token) {
+		return SendNotification.sendNotification(token);
 	}
 }
 
