@@ -220,8 +220,9 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.deepPurple,
                     borderRadius: BorderRadius.circular(20)),
                 child: TextButton(
-                  onPressed: () {
+                  onPressed: () async {
                     Pushy.toggleNotifications(false);
+                    await updateToken(_deviceToken,"false");
                     Navigator.pop(context);
                   },
                   child: const Text(

@@ -24,12 +24,10 @@ public class NotificationJob implements CommandLineRunner {
     		List<Token> tokenList = tokenService.getAllTokens();
     		
     		for (Object token : tokenList) {
-    			System.out.print(((Token) token).getStatus());
-    			
+    			if (Boolean.valueOf(((Token) token).getStatus())) {
+    				SendNotification.sendNotification(((Token) token).getToken());
+    			}
     		}
-    		
-    		System.out.println("Sending notification to \n" + tokenList);
-    		//SendNotification.sendNotification();
     	}        
     }
     
